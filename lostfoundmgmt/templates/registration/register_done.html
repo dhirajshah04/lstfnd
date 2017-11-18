@@ -1,0 +1,23 @@
+{% extends 'lostfound/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Registration Done{% endblock %}</title>
+    </head>
+
+    <body>
+
+    {% block content %}
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="text-justify">
+                    <h1> Welcome {{ new_user.first_name }}!</h1>
+                    <p>Your account has been sucessfully created. Now you can
+                        <a href="{% url 'login' %}">Log in</a> </p>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    </body>
+</html>

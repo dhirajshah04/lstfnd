@@ -1,0 +1,32 @@
+{% extends 'lostfound/base.html' %}
+{% load  staticfiles %}
+
+    <title>{% block title %} lost {% endblock %}</title>
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <!div class="col-md-10 col-md-offset-1">
+
+                {% for post in posts %}
+                    <div class="post">
+                        <div class="col-md-3 col-lg-3">
+                            <div class="pstborder">
+                    {% if post.image %}
+                        <div class="thumbnail">
+                            <img src="{{ post.image.url}}" class="img-responsive" style="width: 250px; height: 200px"/>
+                        </div>
+                    {% endif %}
+                    <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+                        <p>{{ post.lost_or_found }} in {{ post.zone }}</p>
+                    <p>{{ post.published_date }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            <!/div>
+        </div>
+    </div>
+
+{% endblock %}
