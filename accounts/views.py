@@ -42,7 +42,7 @@ def login_view(request):
         user = authenticate(username= username, password = password)
         login(request, user)
         messages.success(request, 'Logged In sucessfully!')
-        return redirect('post_new')
+        return redirect('dashboard')
 
     return  render(request, "user/login.html", {"form": form, "title":title})
 
@@ -91,6 +91,8 @@ def edit(request):
                             {'user_form': user_form,
                              'profile_form': profile_form})
 
+
+@login_required()
 def profile(request):
     pro_info = Profile.objects.all()
     return render(request, 'user/profile.html', {'pro_info':pro_info})

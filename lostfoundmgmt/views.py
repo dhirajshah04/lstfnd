@@ -30,3 +30,7 @@ def post_detail(request, year, month, day, post):
                              published_date__month=month,
                              published_date__day=day)
     return render(request, 'lostfound/post_detail.html', {'post': post})
+
+@login_required()
+def dashboard(request):
+    return render(request, 'cadmin/dashboard.html', {})
