@@ -1,0 +1,32 @@
+{% extends 'lostfound/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Profile{% endblock %}</title>
+    </head>
+    <body>
+
+    {% block content %}
+        Username : {{ user.username }}<br>
+        First Name : {{ user.first_name }}<br>
+        Last Name :  {{ user.last_name }}<br>
+         Email ID :  {{ user.email }} <br>
+            {%  for pro in pro_info %}
+                {{ pro.gender }}<br>
+                {{pro.date_of_birth }}<br>
+                {{ pro.phone }}<br>
+                {{ pro.country }}<br>
+                {{ pro.city }}<br>
+                {{ pro.website }}<br>
+            {% endfor %}
+
+                    {% if request.user.profile.photo %}
+                        <div class="thumbnail">
+                            <img src="{{ request.user.profile.photo.url }}" class="img-responsive" style="width: 250px; height: 200px"/>
+                        </div>
+                    {% endif %}
+    {% endblock %}
+
+    </body>
+</html>

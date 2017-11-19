@@ -6,6 +6,7 @@ from django.contrib.auth import (
     login,
     logout,
     )
+from .models import Profile
 
 
 class UserRegistrationForm(forms.ModelForm):
@@ -44,3 +45,14 @@ class UserLoginForm(forms.Form):
                 raise forms.ValidationError("This user is not active")
 
         return super(UserLoginForm, self).clean(*args, **kwargs)
+
+class UserEditForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'email')
+
+
+class ProfileEditForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ('gender', 'date_of_birth', 'phone', 'country', 'city', 'website', 'photo')
