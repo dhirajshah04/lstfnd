@@ -1,4 +1,10 @@
 {% extends 'lostfound/base.html' %}
+{% load staticfiles %}
+
+{% block extra_stylesheet %}
+<link rel="stylesheet" href="{% static 'css/cadmin.css' %}"
+{% endblock %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,16 +16,28 @@
     {% block content %}
         <div class="container">
             <div class="row">
+                <div class="col-md-3">
+                    <div class="list-group">
+                        <h1><a href="{% url 'profile' %}" class="list-group-item">{{ user.username }}</a></h1>
+                        <h3><a href="{% url 'dashboard' %}" class="list-group-item">Dashboard</a></h3>
+                        <h3><a href="{% url 'post_new' %}" class="list-group-item">New Post</a></h3>
+                        <h3><a href="{% url 'dash_post_list' %}" class="list-group-item">My Posts</a> </h3>
 
-                <div class="col-md-4">
-                    <ul>
-                        <li><h1>{{ user.username }}</h1></li>
-                        <li><h3>Dashboard</h3></li>
-                        <li><h3>New Post</h3></li>
-                    </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-1">
+
+                <div class="border">
+                    <p>jdfsh</p>
+
+                </div>
                 </div>
 
                 <div class="col-md-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><h5>Dashboard</h5></div>
+                    </div>
 
                 </div>
 

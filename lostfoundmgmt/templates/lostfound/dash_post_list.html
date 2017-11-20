@@ -1,0 +1,31 @@
+{% extends 'lostfound/base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}My Posts{% endblock %}</title>
+    </head>
+    <body>
+
+    {% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">My Posts</div>
+                            <div class="panel-body">
+                                {% for post in posts %}
+                                    <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+                                    <hr>
+                                {% endfor %}
+                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    </body>
+</html>

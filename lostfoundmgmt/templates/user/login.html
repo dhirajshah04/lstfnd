@@ -14,9 +14,16 @@
                 <form action="" method="POST" class="well">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <button class="btn btn-primary btn-block main-bg-color"><i class="fa fa-sign-in fa-lg"></i>
+                    <button class="btn btn-primary btn-block main-bg-color"><i class="fa fa-sign-in fa-lg"></i></button>
                 </form>
+                    <div class="text-center">
+                        <p><a href="{% url 'register' %}">Register</a> ||
+                        <a href="{% url 'password_reset' %}">Forgot Password?</a></p>
+                    </div>
             </div>
+
+
+
         </div>
     {% endblock %}
     </body>

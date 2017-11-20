@@ -9,4 +9,5 @@ urlpatterns = [
         name='post_detail'),
     url(r'post/new/$', views.post_new, name='post_new'),
     url(r'^user/dashboard/$', views.dashboard, name='dashboard'),
+    url(r'^user/dashboard/myposts/$', views.dash_post_list, name='dash_post_list'),
 ]

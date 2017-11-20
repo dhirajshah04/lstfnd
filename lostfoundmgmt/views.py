@@ -21,7 +21,7 @@ def post_new(request):
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
-    return render(request, 'lostfound/post_list.html', {'posts':posts})
+    return render(request, 'lostfound/post_list.html', {'posts': posts})
 
 
 def post_detail(request, year, month, day, post):
@@ -34,3 +34,9 @@ def post_detail(request, year, month, day, post):
 @login_required()
 def dashboard(request):
     return render(request, 'cadmin/dashboard.html', {})
+
+
+@login_required()
+def dash_post_list(request):
+    posts = Post.objects.all()
+    return render(request, 'lostfound/dash_post_list.html', {'posts':posts})
