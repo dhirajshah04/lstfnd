@@ -31,7 +31,7 @@ class Post(models.Model):
 
     author = models.ForeignKey(User)
     title = models.CharField(max_length=120)
-    slug = models.SlugField(max_length=50, unique_for_date='published_date')
+    slug = models.SlugField(max_length=50, unique=True)
     image = models.ImageField(null=False, blank=False)
     text = models.TextField(max_length=500)
     created_date = models.DateTimeField(default=timezone.now)
@@ -48,8 +48,11 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+    #def get_absolute_url(self):
+        #return reverse('post_detail', args=[self.published_date.year,
+                                            #self.published_date.strftime('%m'),
+                                            #self.published_date.strftime('%d'),
+                                            #self.slug])
+
     def get_absolute_url(self):
-        return reverse('post_detail', args=[self.published_date.year,
-                                            self.published_date.strftime('%m'),
-                                            self.published_date.strftime('%d'),
-                                            self.slug])
+        return reverse('post_detail', args=[self.slug])

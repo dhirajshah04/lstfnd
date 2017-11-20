@@ -21,6 +21,7 @@ def register(request):
             new_user = user_form.save(commit=False)
             new_user.set_password(
                 user_form.cleaned_data['password'])
+            new_user.is_staff = True
             new_user.save()
             profile = Profile.objects.create(user=new_user)
             return render(request, 'registration/register_done.html',

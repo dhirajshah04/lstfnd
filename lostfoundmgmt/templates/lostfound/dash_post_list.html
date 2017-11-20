@@ -16,7 +16,9 @@
                         <div class="panel-heading">My Posts</div>
                             <div class="panel-body">
                                 {% for post in posts %}
-                                    <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+                                    <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                                    <a class="btn btn-default" style="float:right" href="{% url 'post_remove' slug=post.slug %}">
+                                    <span class="glyphicon glyphicon-trash"></span></a></h4>
                                     <hr>
                                 {% endfor %}
                             </div>
