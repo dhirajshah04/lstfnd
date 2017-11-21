@@ -1,4 +1,8 @@
 {% extends 'lostfound/base.html' %}
+{% load staticfiles %}
+{% block extra_stylesheet %}
+<link rel="stylesheet" href="{% static 'css/cadmin.css' %}"
+{% endblock %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,15 +14,63 @@
 
         {% block content %}
             <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                <form method="POST" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit" class="save btn btn-default">Publish</button>
-                </form>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="list-group">
+                            <h3><a href="{% url 'dashboard' %}" class="list-group-item">Dashboard</a></h3>
+                            <h3><a href="{% url 'post_new' %}" class="list-group-item">New Post</a></h3>
+                            <h3><a href="{% url 'dash_post_list' %}" class="list-group-item">My Posts</a> </h3>
+                            <h3><a href="{% url 'profile' %}" class="list-group-item">{{ user.username }}</a></h3>
+                            <h3><a href="{% url 'change_password' %}" class="list-group-item">Change Password</a></h3>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 titlepanel">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">New Post</div>
+                                <div class="panel-body">
+                                    <form method="POST" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div class="input-group text-center">
+                                            <strong>Title</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{ form.title }}
+                                        </div>
+                                        <br>
+
+                                        <div class="input-group text-center">
+                                            <strong>Slug</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{ form.slug }}
+                                        </div>
+                                        <br>
+
+                                        <div class="input-group">
+                                            <strong>Image</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{ form.image }}
+                                        </div>
+                                        <br>
+
+                                        <div class="input-group">
+                                            <strong>Description</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{ form.text }}
+                                        </div>
+                                        <br>
+
+                                        <div class="input-group text-center">
+                                            <strong>Lost or Found</strong> &nbsp;&nbsp;&nbsp;&nbsp; : {{ form.lost_or_found }}
+                                        </div>
+                                        <br>
+
+                                        <div class="input-group text-center">
+                                            <strong>Zone</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{ form.zone }}
+                                        </div>
+                                        <br>
+
+                                        <div class="text-center">
+                                            <button type="submit" class="save btn btn-primary"><strong>Publish</strong></button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
             </div>
         {% endblock %}
 

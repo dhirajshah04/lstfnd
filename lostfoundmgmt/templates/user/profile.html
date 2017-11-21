@@ -1,4 +1,8 @@
 {% extends 'lostfound/base.html' %}
+{% load staticfiles %}
+{% block extra_stylesheet %}
+<link rel="stylesheet" href="{% static 'css/cadmin.css' %}"
+{% endblock %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,24 +12,105 @@
     <body>
 
     {% block content %}
-        Username : {{ user.username }}<br>
-        First Name : {{ user.first_name }}<br>
-        Last Name :  {{ user.last_name }}<br>
-         Email ID :  {{ user.email }} <br>
-            {%  for pro in pro_info %}
-                {{ pro.gender }}<br>
-                {{pro.date_of_birth }}<br>
-                {{ pro.phone }}<br>
-                {{ pro.country }}<br>
-                {{ pro.city }}<br>
-                {{ pro.website }}<br>
-            {% endfor %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="list-group">
+                        <h3><a href="{% url 'dashboard' %}" class="list-group-item">Dashboard</a></h3>
+                        <h3><a href="{% url 'post_new' %}" class="list-group-item">New Post</a></h3>
+                        <h3><a href="{% url 'dash_post_list' %}" class="list-group-item">My Posts</a> </h3>
+                        <h3><a href="{% url 'profile' %}" class="list-group-item">{{ user.username }}</a></h3>
+                        <h3><a href="{% url 'change_password' %}" class="list-group-item">Change Password</a></h3>
 
-                    {% if request.user.profile.photo %}
-                        <div class="thumbnail">
-                            <img src="{{ request.user.profile.photo.url }}" class="img-responsive" style="width: 250px; height: 200px"/>
+                    </div>
+                </div>
+
+
+                <div class="col-md-7 titlepanel">
+                    <div class="panel panel-primary">
+
+                        <div class="panel-heading">
+                            <h5>My Profile : {{ user.username }}</h5>
                         </div>
-                    {% endif %}
+
+                        <div class="panel-body">
+                                {% if request.user.profile.photo %}
+                                    <img src="{{ request.user.profile.photo.url }}" class="img-responsive img-circle" style="width: 150px; height: 150px"/>
+                                {% endif %}
+                                <br>
+
+                                <div class="text-center">
+                                    <table class="table table-hover table-striped table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <td class="bg-defeault text-center" colspan="2">
+                                                    <strong>Personal Details</strong>
+                                                    <a class="btn btn-primary" style="float: right" href="{% url 'profile_edit'%}">Edit</a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="field-title"><strong>Username</strong></td>
+                                                <td class="field-title">{{ user.username }}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="field-title"><strong>First Name</strong></td>
+                                                <td class="field-title">{{ user.first_name }}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="field-title"><strong>Last Name</strong></td>
+                                                <td class="field-title">{{ user.last_name }}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="field-title"><strong>Email ID</strong></td>
+                                                <td class="field-title">{{ user.email }}</td>
+                                            </tr>
+
+                                            {%  for pro in pro_info %}
+
+                                            <tr>
+                                                <td class="field-title"><strong>Gender</strong></td>
+                                                <td class="field-title">{{ pro.gender }}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="field-title"><strong>Date Of Birth</strong></td>
+                                                <td class="field-title">{{ pro.date_of_birth }}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="field-title"><strong>Mobile</strong></td>
+                                                <td class="field-title">{{ pro.phone }}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="field-title"><strong>Country</strong></td>
+                                                <td class="field-title">{{ pro.country }}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="field-title"><strong>City</strong></td>
+                                                <td class="field-title">{{ pro.city }}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="field-title"><strong>Website</strong></td>
+                                                <td class="field-title">{{ pro.website }}</td>
+                                            </tr>
+
+                                            {% endfor %}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     {% endblock %}
 
     </body>

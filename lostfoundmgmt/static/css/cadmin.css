@@ -1,4 +1,7 @@
-.border {
-    border-left: solid 2px blue ;
-    height: 90px;
+.titlepanel {
+    margin-top: 21px;
+}
+
+.img-circle {
+    margin:0 auto;
 }
