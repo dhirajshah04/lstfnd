@@ -1,5 +1,6 @@
 .post {
     margin-top: 5px;
+
 }
 
 .pstborder {
@@ -7,5 +8,24 @@
 }
 
 .ptitle {
-    width: 100%;
+    position: relative;
+    bottom: 30px;
+}
+
+.thutitle {
+    position: relative;
+    top: -204px;
+    right: 90px;
+}
+
+.lostfoundtag {
+    position: relative;
+    top: -215px;
+    right: 90px;
+    background-color: orange;
+    margin-left:90px;
+    margin-right: 80px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    box-shadow: 1px 2px green;
 }

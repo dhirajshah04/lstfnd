@@ -7,24 +7,24 @@
     <div class="container">
         <div class="row">
             <!div class="col-md-10 col-md-offset-1">
-
                 {% for post in posts %}
                     <div class="post">
                         <div class="col-md-3 col-lg-3">
-                            <div class="pstborder">
+                            <!div class="pstborder">
                                 {% if post.image %}
-                                    <div class="thumbnail">
-                                        <img src="{{ post.image.url}}" class="img-responsive" style="width: 250px; height: 200px"/>
-                                    </div>
+                                    <!div class="thumbnail">
+                                    <a href="{{ post.get_absolute_url }}">
+                                        <img src="{{ post.image.url}}" class="img-responsive" style="width: 300px; height: 230px"/>
+                                    </a>
+                                    <p class="text-center lostfoundtag"><strong>{{ post.lost_or_found }}</strong></p>
+                                    <!/div>
                                 {% endif %}
-                                <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
-                                <p>{{ post.lost_or_found }} in {{ post.zone }}</p>
-                                <p>{{ post.published_date }}</p>
-                            </div>
+                                <h4 class="text-center ptitle"><a href="{{ post.get_absolute_url }}">{{ post.title | truncatechars_html:30 }}</a></h4>
+
+                            <!/div>
                         </div>
                     </div>
                 {% endfor %}
-
             <!/div>
         </div>
     </div>
