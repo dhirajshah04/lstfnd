@@ -32,12 +32,41 @@
                         <div class="panel-heading">My Posts</div>
                             <div class="panel-body">
                                 {% for post in posts %}
-                                    <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-                                    <a class="btn btn-default" style="float:right" href="{% url 'post_edit' slug=post.slug %}">
-                                    <span class="glyphicon glyphicon-pencil"></span></a>
-                                    <a class="btn btn-default" style="float:right" href="{% url 'post_remove' slug=post.slug %}">
-                                    <span class="glyphicon glyphicon-trash"></span></a></h4>
-                                    <hr>
+                                    <h4>
+                                    <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+
+
+                                        <button style="float:right;" type="button" data-toggle="modal" data-target="#post-{{ post.slug }}">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                        </button>
+
+                                        <div class="modal fade" id="post-{{ post.slug }}" role="dialog">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">X</button>
+                                                        <h4 class="modal-title">Do You Want To Delete ?</h4>
+                                                    </div>
+
+                                                    <div class="modal-body">
+                                                        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <a href="{% url 'post_remove' slug=post.slug %}">
+                                                            <button type="button" class="btn btn-danger btn-md">Yes</button>
+                                                        </a>
+                                                        <button type="button" class="btn btn-primary btn-md" data-dismiss="modal">No</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                            <a class="btn btn-default" style="float:right" href="{% url 'post_edit' slug=post.slug %}">
+                                           <span class="glyphicon glyphicon-pencil"></span></a>
+                                    </h4>
+                                            <hr>
                                 {% endfor %}
 
                                 <div class="text-center">

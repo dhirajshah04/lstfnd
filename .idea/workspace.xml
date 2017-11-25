@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37a9cc08-39bf-4f73-8d82-2ffa5980e304" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lostfoundmgmt/static/css/style.css" afterPath="$PROJECT_DIR$/lostfoundmgmt/static/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/base.html" afterPath="$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/dash_post_list.html" afterPath="$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/dash_post_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/post_detail.html" afterPath="$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/post_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/post_list.html" afterPath="$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/post_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lostfoundmgmt/views.py" afterPath="$PROJECT_DIR$/lostfoundmgmt/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lostfoundmgmt/templates/user/login.html" afterPath="$PROJECT_DIR$/lostfoundmgmt/templates/user/login.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post_detail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="post_detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/post_detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -81,11 +77,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="71" column="49" lean-forward="false" selection-start-line="71" selection-start-column="49" selection-end-line="71" selection-end-column="49" />
+            <state relative-caret-position="342">
+              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lostfoundmgmt/templates/user/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -94,11 +102,13 @@
       <file leaf-file-name="dash_post_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/dash_post_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="109">
+              <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
               <folding>
-                <element signature="e#2440#2444#0#HTML" expanded="true" />
-                <element signature="e#2726#2730#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#h4#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#h4#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#4207#4211#0#HTML" expanded="true" />
+                <element signature="e#4493#4497#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,6 +148,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>ptitle</find>
+      <find>id</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,7 +175,6 @@
         <option value="$PROJECT_DIR$/lostfoundmgmt/templates/registration/password_reset_done.html" />
         <option value="$PROJECT_DIR$/lostfoundmgmt/templates/registration/password_reset_confirm.html" />
         <option value="$PROJECT_DIR$/lostfoundmgmt/templates/registration/password_reset_complete.html" />
-        <option value="$PROJECT_DIR$/lostfoundmgmt/templates/user/login.html" />
         <option value="$PROJECT_DIR$/lstfnd/settings.py" />
         <option value="$PROJECT_DIR$/lostfoundmgmt/forms.py" />
         <option value="$PROJECT_DIR$/accounts/views.py" />
@@ -178,13 +188,14 @@
         <option value="$PROJECT_DIR$/lostfoundmgmt/urls.py" />
         <option value="$PROJECT_DIR$/lostfoundmgmt/templates/user/profile_edit.html" />
         <option value="$PROJECT_DIR$/lostfoundmgmt/templates/user/profile.html" />
-        <option value="$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/base.html" />
         <option value="$PROJECT_DIR$/lstfnd/pagination.py" />
         <option value="$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/post_list.html" />
-        <option value="$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/dash_post_list.html" />
         <option value="$PROJECT_DIR$/lostfoundmgmt/views.py" />
         <option value="$PROJECT_DIR$/lostfoundmgmt/static/css/style.css" />
         <option value="$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/post_detail.html" />
+        <option value="$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/dash_post_list.html" />
+        <option value="$PROJECT_DIR$/lostfoundmgmt/templates/user/login.html" />
+        <option value="$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/base.html" />
       </list>
     </option>
   </component>
@@ -252,6 +263,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lostfoundmgmt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lstfnd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lstfnd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lostfoundmgmt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -873,14 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lostfoundmgmt/templates/user/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="120" lean-forward="false" selection-start-line="16" selection-start-column="120" selection-end-line="16" selection-end-column="120" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
@@ -973,13 +998,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lostfoundmgmt/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="57" column="55" lean-forward="true" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lostfoundmgmt/templates/user/profile_edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -1020,14 +1038,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="71" column="49" lean-forward="false" selection-start-line="71" selection-start-column="49" selection-end-line="71" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/post_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
@@ -1035,27 +1045,6 @@
           <folding>
             <element signature="e#1620#1624#0#HTML" expanded="true" />
             <element signature="e#1839#1843#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/dash_post_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding>
-            <element signature="e#2440#2444#0#HTML" expanded="true" />
-            <element signature="e#2726#2730#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lostfoundmgmt/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="64" column="51" lean-forward="false" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1073,6 +1062,55 @@
         <state relative-caret-position="270">
           <caret line="15" column="83" lean-forward="false" selection-start-line="15" selection-start-column="83" selection-end-line="15" selection-end-column="83" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lostfoundmgmt/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="64" column="51" lean-forward="false" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lostfoundmgmt/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="634">
+          <caret line="57" column="55" lean-forward="true" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/dash_post_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#h4#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#h4#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4207#4211#0#HTML" expanded="true" />
+            <element signature="e#4493#4497#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lostfoundmgmt/templates/user/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lostfoundmgmt/templates/lostfound/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
