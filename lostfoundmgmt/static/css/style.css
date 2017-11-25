@@ -1,15 +1,36 @@
-.post {
-    margin-top: 5px;
-
+.navbar-default {
+    background : orangered;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-.pstborder {
-    border: solid green 2px;
+.text {
+    color: white;
+    font-size: 30px;
+}
+.nav.navbar-nav.navbar-right li a {
+     color: white;
+    font-size: 20px;
+}
+
+.tagline {
+    line-height: 0;
+    letter-spacing: 3px;
+}
+
+.post {
+    margin-top: 60px;
+
 }
 
 .ptitle {
     position: relative;
     bottom: 30px;
+}
+
+.postdetail {
+    margin-top: 25px;
+    margin-bottom: 50px;
 }
 
 .thutitle {
@@ -28,4 +49,21 @@
     padding-top:5px;
     padding-bottom: 5px;
     box-shadow: 1px 2px green;
+}
+
+footer {
+    background-color: orangered;
+    color: white;
+
+    padding-bottom: 40px;
+}
+
+.footext {
+    margin-top: -40px;
+}
+
+.cfoot {
+    background-color: #0f0f0f;
+    color: white;
+    margin-bottom: 0;
 }

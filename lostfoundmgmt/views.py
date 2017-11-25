@@ -4,6 +4,7 @@ from .forms import PostForm
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
+from lstfnd import pagination
 
 
 @login_required()
@@ -38,7 +39,8 @@ def post_edit(request, slug):
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
-    return render(request, 'lostfound/post_list.html', {'posts': posts})
+    post = pagination.pg_records(request, posts, 20)
+    return render(request, 'lostfound/post_list.html', {'posts': post})
 
 
 '''def post_detail(request, year, month, day, post):
@@ -60,7 +62,8 @@ def dashboard(request):
 @staff_member_required()
 def dash_post_list(request):
     posts = Post.objects.filter(author=request.user).order_by('published_date').reverse()
-    return render(request, 'lostfound/dash_post_list.html', {'posts':posts})
+    post = pagination.pg_records(request, posts, 10)
+    return render(request, 'lostfound/dash_post_list.html', {'posts':post})
 
 @staff_member_required()
 def post_remove(request, slug):

@@ -18,7 +18,7 @@
     <body>
 
         {% block navigation %}
-            <nav class="navbar navbar-default">
+            <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header navbar-left">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
@@ -69,6 +69,7 @@
             <div class="row">
                 <div class="col-md-12">
                 <h1 class="text-center">LOST OR FOUND</h1>
+                    <p class="text-center tagline">Help and Get Helped</p>
                 </div>
             </div>
             </div>
@@ -78,6 +79,39 @@
         {% endblock %}
 
         {% block footer %}
+            <footer>
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-md-4 text-center">
+                        <h2>About US</h2>
+                        <hr>
+                        <P>text text text text text text
+                        text text text text text text.</P>
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <h1>Contact Us</h1>
+                        <hr>
+                        <p>hello you can contact us. hello you can contact us.
+                        hello you can contact us. hello you can contact us.
+                        hello you can contact us. hello you can contact us.
+                        hello you can contact us. hello you can contact us. </p>
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <h2>Social Media</h2>
+                        <hr>
+                        <p>facebook , twitter, Goolge Plus.
+                        facebook , twitter, Goolge Plus.
+                        facebook , twitter, Goolge Plus.
+                        facebook , twitter, Goolge Plus. </p>
+                    </div>
+
+                </div>
+            </div>
+            </footer>
+              <p class="text-center cfoot">&copy; All Rights Reserved</p>
         {% endblock %}
 
         <script src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>

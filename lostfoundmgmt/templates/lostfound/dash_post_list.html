@@ -39,12 +39,31 @@
                                     <span class="glyphicon glyphicon-trash"></span></a></h4>
                                     <hr>
                                 {% endfor %}
+
+                                <div class="text-center">
+                                    <div class="pagination">
+                                        <div class="section-inner clearfix">
+                                        <p>
+                                            {% if posts.has_previous %}
+                                            <a href="?page={{ posts.previous_page_number }}"><button type="button" class="btn btn-info">&lt; Prev</button></a> |
+                                            {% endif %}
+                                            {% if posts.has_next %}
+                                            <a href="?page={{ posts.next_page_number }}"><button type="button" class="btn btn-info">Next &gt;</button></a>
+                                            {% endif %}
+                                            <span>Page {{ posts.number }} of {{ posts.paginator.num_pages }}</span>
+                                        </p>
+                                    </div>
+                                </div>
+
                             </div>
+                        </div>
                     </div>
 
                 </div>
             </div>
         </div>
+
+
     {% endblock %}
 
     </body>
