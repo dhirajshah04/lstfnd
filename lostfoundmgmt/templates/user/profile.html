@@ -11,6 +11,17 @@
     </head>
     <body>
 
+    {% block header %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <h1 class="text-center">DASHBOARD</h1>
+                    <p class="text-center tagline">Help and Get Helped</p>
+                </div>
+            </div>
+            </div>
+        {% endblock %}
+
     {% block content %}
         <div class="container">
             <div class="row">
@@ -94,11 +105,6 @@
                                             <tr>
                                                 <td class="field-title"><strong>City</strong></td>
                                                 <td class="field-title">{{ pro.city }}</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="field-title"><strong>Website</strong></td>
-                                                <td class="field-title">{{ pro.website }}</td>
                                             </tr>
 
                                             {% endfor %}

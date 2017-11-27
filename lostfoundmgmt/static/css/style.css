@@ -33,6 +33,11 @@
     margin-bottom: 50px;
 }
 
+.postimg {
+    width: 250px;
+    height: 250px;
+}
+
 .thutitle {
     position: relative;
     top: -204px;
@@ -66,4 +71,14 @@ footer {
     background-color: #0f0f0f;
     color: white;
     margin-bottom: 0;
+}
+
+.header {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.contact {
+    margin-top: 10px;
+    padding-bottom: 25px;
 }

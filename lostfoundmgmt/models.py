@@ -40,19 +40,12 @@ class Post(models.Model):
     lost_or_found = models.CharField(max_length=10, null=False, choices=lost_or_found)
     zone = models.CharField(max_length=25, null=False, choices=zone)
 
-
     def publish(self):
         self.published_date = timezone.now()
         self.save()
 
     def __str__(self):
         return self.title
-
-    #def get_absolute_url(self):
-        #return reverse('post_detail', args=[self.published_date.year,
-                                            #self.published_date.strftime('%m'),
-                                            #self.published_date.strftime('%d'),
-                                            #self.slug])
 
     def get_absolute_url(self):
         return reverse('post_detail', args=[self.slug])

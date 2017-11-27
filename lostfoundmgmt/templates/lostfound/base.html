@@ -17,6 +17,19 @@
 
     <body style="background-color: #F8F8F8">
 
+        {% block header %}
+            <div class="container">
+            <div class="row">
+                <div class="col-md-12 header">
+                <h1 class="text-center">LOST OR FOUND</h1>
+                    <p class="text-center tagline">Help and Get Helped</p>
+                </div>
+            </div>
+            </div>
+        {% endblock %}
+
+
+
         {% block navigation %}
             <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header navbar-left">
@@ -33,9 +46,9 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="/">Home</a></li>
-                        <li><a href="">About</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
                         {% if user.is_authenticated %}
-                        <li><a href="{% url 'profile' %}">{{ request.user.username }}</a></li>
                         <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
                         <li><a href="{% url 'logout' %}">Logout</a></li>
                             {% else %}
@@ -64,15 +77,9 @@
             {% endif %}
         </div>
 
-        {% block header %}
-            <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                <h1 class="text-center">LOST OR FOUND</h1>
-                    <p class="text-center tagline">Help and Get Helped</p>
-                </div>
-            </div>
-            </div>
+
+
+        {% block head %}
         {% endblock %}
 
         {% block content %}

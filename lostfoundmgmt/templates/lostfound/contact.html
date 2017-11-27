@@ -1,0 +1,33 @@
+{% extends 'lostfound/base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Contact Us{% endblock %}</title>
+    </head>
+    <body>
+
+    {% block head %}
+        <h1 class="text-center contact">Contact Us</h1>
+    {% endblock %}
+
+    {% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <form role="form" action="" method="post" class="contact">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+
+    {% endblock %}
+
+    </body>
+</html>
