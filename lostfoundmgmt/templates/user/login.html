@@ -8,15 +8,22 @@
 
     <body>
 
+    {% block navigation %}
+    {% endblock %}
+
     {% block content %}
+
+
         <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
-                <h1 class="text-center">{{ title }}</h1>
-                <form action="" method="POST" class="well">
+                <form action="" method="POST" class="well loginbox">
+                    <h1 class="text-center">{{ title }}</h1>
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <button class="btn btn-primary btn-block main-bg-color"><i class="fa fa-sign-in fa-lg"></i></button>
+                    <button class="btn btn-primary btn-block main-bg-color"><i class="fa fa-sign-in fa-lg"></i>
+                    Login
+                    </button>
                 </form>
                     <div class="text-center">
                         <p><a href="{% url 'register' %}">Register</a> ||
@@ -25,6 +32,10 @@
             </div>
         </div>
         </div>
+
+    {% endblock %}
+
+    {% block footer %}
     {% endblock %}
     </body>
 </html>

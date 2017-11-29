@@ -1,5 +1,5 @@
 .navbar-default {
-    background : orangered;
+    background : royalblue;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -44,6 +44,8 @@
     right: 90px;
 }
 
+
+/* To display either 'Lost' or 'Found' on the featured Image on homepage*/
 .lostfoundtag {
     position: relative;
     top: -215px;
@@ -57,7 +59,7 @@
 }
 
 footer {
-    background-color: orangered;
+    background-color: royalblue;
     color: white;
 
     padding-bottom: 40px;
@@ -78,7 +80,21 @@ footer {
     padding-bottom: 30px;
 }
 
+.header > a {
+    color: #333333;
+    text-decoration: none;
+}
+
 .contact {
     margin-top: 10px;
     padding-bottom: 25px;
+}
+
+.about-para {
+    padding-bottom: 80px;
+}
+
+.loginbox {
+    box-shadow: 7px 7px;
+    margin-top: 100px;
 }

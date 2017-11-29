@@ -12,16 +12,6 @@
 
     <body>
 
-    {% block header %}
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                    <h1 class="text-center">DASHBOARD</h1>
-                    <p class="text-center tagline">Help and Get Helped</p>
-                </div>
-            </div>
-            </div>
-        {% endblock %}
 
 
         {% block content %}
@@ -45,11 +35,6 @@
                                         {% csrf_token %}
                                         <div class="input-group text-center">
                                             <strong>Title</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{ form.title }}
-                                        </div>
-                                        <br>
-
-                                        <div class="input-group text-center">
-                                            <strong>Slug</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{ form.slug }}
                                         </div>
                                         <br>
 
