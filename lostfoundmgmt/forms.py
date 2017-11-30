@@ -11,6 +11,11 @@ class PostForm(forms.ModelForm):
                   'lost_or_found',
                   'zone',)
 
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title'}),
+            'text': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'write a short Description'}),
+        }
+
 class ContactForm(forms.Form):
     Name = forms.CharField(max_length=20, required=True, widget=forms.TextInput(
         attrs={

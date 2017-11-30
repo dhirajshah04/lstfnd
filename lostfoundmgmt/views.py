@@ -1,3 +1,4 @@
+from urllib.parse import quote_plus
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post
 from .forms import PostForm, ContactForm
@@ -54,7 +55,9 @@ def post_list(request):
 
 def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
-    return render(request, 'lostfound/post_detail.html', {'post':post})
+    share = quote_plus(post.text)
+    return render(request, 'lostfound/post_detail.html', {'post': post,
+                                                          'share': share})
 
 @login_required()
 def dashboard(request):

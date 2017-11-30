@@ -1,7 +1,7 @@
 {% extends 'lostfound/base.html' %}
 {% load staticfiles %}
 {% block extra_stylesheet %}
-<link rel="stylesheet" href="{% static 'css/cadmin.css' %}"
+<link rel="stylesheet" href="{% static 'css/cadmin.css' %}">
 {% endblock %}
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +22,6 @@
                         <h3><a href="{% url 'dash_post_list' %}" class="list-group-item">My Posts</a> </h3>
                         <h3><a href="{% url 'profile' %}" class="list-group-item">{{ user.username }}</a></h3>
                         <h3><a href="{% url 'change_password' %}" class="list-group-item">Change Password</a></h3>
-
                     </div>
                 </div>
 
@@ -37,6 +36,7 @@
                         <div class="panel-body">
                                 {% if request.user.profile.photo %}
                                     <img src="{{ request.user.profile.photo.url }}" class="img-responsive img-circle" style="width: 150px; height: 150px"/>
+
                                 {% endif %}
                                 <br>
 

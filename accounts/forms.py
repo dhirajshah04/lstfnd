@@ -76,11 +76,20 @@ class UserEditForm(forms.ModelForm):
         model = User
         fields = ('first_name', 'last_name', 'email')
 
+        widgets = {
+            'first_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'First Name'}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Last Name'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Email'}),
+        }
+
 
 class ProfileEditForm(forms.ModelForm):
-    date_of_birth = forms.DateField(
-        widget=forms.TextInput(attrs={'placeholder':'YYYY-MM-DD'})
-    )
     class Meta:
         model = Profile
         fields = ('gender', 'date_of_birth', 'phone', 'country', 'city', 'photo')
+
+        widgets = {
+            'date_of_birth': forms.SelectDateWidget(attrs={'placeholder': 'YYYY-MM-DD'}),
+            'country': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Country'}),
+            'city': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'City'}),
+        }
