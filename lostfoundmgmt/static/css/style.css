@@ -33,6 +33,13 @@
     margin-bottom: 50px;
 }
 
+.postdetailtext {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 1px;
+}
+
 .postimg {
     width: 250px;
     height: 250px;
@@ -85,6 +92,11 @@ footer {
     text-decoration: none;
 }
 
+
+.search {
+    padding-top: 45px;
+}
+
 .contact {
     margin-top: 10px;
     padding-bottom: 25px;
@@ -92,6 +104,10 @@ footer {
 
 .about-para {
     padding-bottom: 80px;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 1px;
 }
 
 .loginbox {

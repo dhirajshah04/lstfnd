@@ -89,7 +89,7 @@ class ProfileEditForm(forms.ModelForm):
         fields = ('gender', 'date_of_birth', 'phone', 'country', 'city', 'photo')
 
         widgets = {
-            'date_of_birth': forms.SelectDateWidget(attrs={'placeholder': 'YYYY-MM-DD'}),
+            'date_of_birth': forms.DateInput(attrs={'type': 'date', 'placeholder': 'YYYY-MM-DD'}),
             'country': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Country'}),
             'city': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'City'}),
         }

@@ -95,5 +95,5 @@ def edit(request):
 
 @login_required()
 def profile(request):
-    pro_info = Profile.objects.all()
+    pro_info = Profile.objects.filter(user=request.user)
     return render(request, 'user/profile.html', {'pro_info':pro_info})

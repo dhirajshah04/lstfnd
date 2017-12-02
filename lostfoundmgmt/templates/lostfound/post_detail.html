@@ -14,25 +14,35 @@
             <div class="container">
                 <div class="postdetail">
                     <h1>{{ post.title }}</h1>
-                    <p class="date">{{ post.published_date }} by {{ post.author }}</p>
-                    <p><strong>{{ post.lost_or_found }} in {{ post.zone }}</strong></p>
+                    <p class="date">{{ post.published_date }} by {{ post.author }},
+                    <strong>{{ post.lost_or_found }} in {{ post.zone }}</strong></p>
                     <img src="{{ post.image.url}}" class="img-responsive postimg"/>
-                    {{ post.text|linebreaksbr }}
+                    <br><br>
+                    <div class="postdetailtext">
+                    {{ post.text }}
+                    </div>
+                    <br><br>
+                    <h3>Contact Details:</h3><br>
+                    <strong>Name :</strong> {{ post.author.first_name }} {{ post.author.last_name }}<br>
+                    {{ post.contact }}
                 </div>
 
-
-
+                <hr>
+                <h2>Share on Social Medias</h2>
                 <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}">
                     <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
                 </a>
+                &nbsp;
 
                 <a href="https://twitter.com/home?status={{ share }}%20{{ request.build_absolute_uri }}">
                 <i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i
                 </a>
+                &nbsp;
 
                 <a href='https://plus.google.com/share?url={{ request.build_absolute_uri }}'>
                     <i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i
                 </a>
+                &nbsp;
 
                 <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{ share.title }}&summary={{ share }}&source={{ request.build_absolute_uri }}">
                 <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i

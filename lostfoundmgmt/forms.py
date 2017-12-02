@@ -8,12 +8,14 @@ class PostForm(forms.ModelForm):
         fields = ('title',
                   'image',
                   'text',
+                  'contact',
                   'lost_or_found',
                   'zone',)
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Title'}),
             'text': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'write a short Description'}),
+            'contact': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Please write your contact Information here'}),
         }
 
 class ContactForm(forms.Form):

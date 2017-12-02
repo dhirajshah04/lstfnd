@@ -1,4 +1,5 @@
 from urllib.parse import quote_plus
+from django.db.models import Q
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post
 from .forms import PostForm, ContactForm
@@ -40,24 +41,28 @@ def post_edit(request, slug):
         form = PostForm(instance=post)
     return render(request, 'lostfound/post_new.html', {'form':form})
 
+
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    query = request.GET.get("q")
+    if query:
+        posts = posts.filter(
+            Q(title__icontains=query) |
+            Q(text__icontains=query) |
+            Q(author__first_name__icontains=query) |
+            Q(author__last_name__icontains=query) |
+            Q(contact__icontains=query)
+            ).distinct()
     post = pagination.pg_records(request, posts, 20)
     return render(request, 'lostfound/post_list.html', {'posts': post})
 
-
-'''def post_detail(request, year, month, day, post):
-    post = get_object_or_404(Post, slug=post,
-                             published_date__year=year,
-                             published_date__month=month,
-                             published_date__day=day)
-    return render(request, 'lostfound/post_detail.html', {'post': post})'''
 
 def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
     share = quote_plus(post.text)
     return render(request, 'lostfound/post_detail.html', {'post': post,
                                                           'share': share})
+
 
 @login_required()
 def dashboard(request):
@@ -70,6 +75,7 @@ def dash_post_list(request):
     post = pagination.pg_records(request, posts, 10)
     return render(request, 'lostfound/dash_post_list.html', {'posts':post})
 
+
 @staff_member_required()
 def post_remove(request, slug):
     post = get_object_or_404(Post, slug=slug)
@@ -79,6 +85,7 @@ def post_remove(request, slug):
 
 def about(request):
     return render(request, 'lostfound/about.html', {})
+
 
 def contact(request):
     form_class = ContactForm
