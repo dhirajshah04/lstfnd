@@ -8,7 +8,7 @@ class Profile(models.Model):
     )
 
     user = models.OneToOneField(settings.AUTH_USER_MODEL)
-    gender = models.CharField(max_length=10, null=False, choices=gender, default='Male')
+    gender = models.CharField(max_length=10, null=False, choices=gender, default='Male/Female')
     date_of_birth = models.DateField(blank=True, null=True)
     phone = models.BigIntegerField(default=0)
     country = models.CharField(max_length=50, null=True)
